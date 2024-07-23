@@ -1,0 +1,54 @@
+# config.yml
+
+# 应用程序基本配置
+app:
+  name: "SaaS CMS Homepage"
+  version: "1.0.0"
+  baseUrl: "https://saas-cms.example.com"
+
+# Git仓库同步配置
+git:
+  repositoryUrl: "https://github.com/your-repo/saas-cms-content.git"
+  localPath: "/app/content"
+
+# Markdown文件配置
+markdown:
+  enabled: true
+  contentPath: "/app/content/markdown"
+
+# 数据库配置 (如果有)
+database:
+  host: "localhost"
+  port: 5432
+  username: "user"
+  password: "password"
+  name: "saas_cms_db"
+
+# 身份验证配置
+auth:
+  jwtSecret: "your-secret-key"
+  tokenExpiration: "1h"
+
+# 日志配置
+logging:
+  level: "info"
+  file: "/app/logs/app.log"
+
+# 服务配置
+services:
+  - name: "Service A"
+    endpoint: "/api/service-a"
+  - name: "Service B"
+    endpoint: "/api/service-b"
+
+# 用户权限配置
+permissions:
+  admin:
+    - "read"
+    - "write"
+    - "delete"
+  user:
+    - "read"
+    - "write"
+  guest:
+    - "read"

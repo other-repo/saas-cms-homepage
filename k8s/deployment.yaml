@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: saas-cms-homepage
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: saas-cms-homepage
+  template:
+    metadata:
+      labels:
+        app: saas-cms-homepage
+    spec:
+      containers:
+        - name: saas-cms-homepage
+          image: saas-cms-homepage:latest
+          ports:
+            - containerPort: 3000
