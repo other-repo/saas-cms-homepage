@@ -7,6 +7,7 @@ npm create vite@latest saas-cms-homepage -- --template svelte-ts
 cd saas-cms-homepage
 npm install
 npm install -D tailwindcss postcss autoprefixer
+npm install --save-dev @sveltejs/vite-plugin-svelte
 npm install js-yaml simple-git marked bits-ui marked
 
 mkdir -p src/components src/routes k8s

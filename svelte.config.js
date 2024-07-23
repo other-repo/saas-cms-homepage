@@ -1,10 +1,16 @@
-const sveltePreprocess = require('svelte-preprocess');
+import sveltePreprocess from 'svelte-preprocess';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
-module.exports = {
+// Define whether production mode is active
+const production = process.env.NODE_ENV === 'production';
+
+export default {
   preprocess: sveltePreprocess({
     sourceMap: !production,
     postcss: {
-      plugins: [require('tailwindcss'), require('autoprefixer')],
+      plugins: [tailwindcss(), autoprefixer()],
     },
   }),
 };
+
