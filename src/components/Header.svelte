@@ -4,34 +4,13 @@
   $: user.subscribe(value => currentUser = value);
 </script>
 
-<header>
-  <nav>
-    <ul>
-      <li><a href="/about">About</a></li>
-      <li><a href="/service">Service</a></li>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/signin">Sign In</a></li>
-    </ul>
-  </nav>
+<div class="bg-primary text-white p-4">
+  <header class="flex items-center justify-between">
+  <h1 class="text-2xl">My SaaS CMS Homepage</h1>
+    <nav class="space-x-4">
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#services" class="hover:underline">Services</a>
+      <a href="#login" class="hover:underline">Login/Sign In</a>
+    </nav>
 </header>
-
-<style>
-  header {
-    background: #f8f9fa;
-    padding: 1rem;
-  }
-
-  nav ul {
-    display: flex;
-    list-style: none;
-  }
-
-  nav ul li {
-    margin-right: 1rem;
-  }
-
-  nav ul li a {
-    text-decoration: none;
-  }
-</style>
-
+</div>
